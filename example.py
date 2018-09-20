@@ -10,19 +10,18 @@ from src.follow_protocol import follow_protocol
 from src.unfollow_protocol import unfollow_protocol
 
 bot = InstaBot(
-    login="username",
-    password="password",
     like_per_day=1000,
     comments_per_day=0,
-    tag_list=['follow4follow', 'f4f', 'cute', 'l:212999109'],
-    tag_blacklist=['rain', 'thunderstorm'],
+    tag_list=[],
+    tag_blacklist=['rain', 'thunderstorm', 'calidad', 'diseño', 'zapatos'],
     user_blacklist={},
     max_like_for_one_tag=50,
+    media_max_like=100,
     follow_per_day=300,
     follow_time=1 * 60,
     unfollow_per_day=300,
-    unfollow_break_min=15,
-    unfollow_break_max=30,
+    unfollow_break_min=400,
+    unfollow_break_max=500,
     log_mod=0,
     proxy='',
     # List of list of words, each of which will be used to generate comment
@@ -47,12 +46,15 @@ bot = InstaBot(
         'case', 'baju', 'fashion', 'corp', 'tas', 'butik', 'grosir', 'karpet',
         'sosis', 'salon', 'skin', 'care', 'cloth', 'tech', 'rental', 'kamera',
         'beauty', 'express', 'kredit', 'collection', 'impor', 'preloved',
-        'follow', 'follower', 'gain', '.id', '_id', 'bags'
+        'follow', 'follower', 'gain', '.id', '_id', 'bags', 'moda', 'underwear',
+        'fitness', 'restaurante', 'oficial', 'bodega', 'importer', 'clothing',
+        'travel', 'relojes', 'ink', 'makeup', 'shoes', 'shop', 'design'
     ],
     unfollow_whitelist=['example_user_1', 'example_user_2'])
 while True:
 
     #print("# MODE 0 = ORIGINAL MODE BY LEVPASHA")
+    #Like photos based on tag you've provided, follow the people who upload it, and make comments
     #print("## MODE 1 = MODIFIED MODE BY KEMONG")
     #print("### MODE 2 = ORIGINAL MODE + UNFOLLOW WHO DON'T FOLLOW BACK")
     #print("#### MODE 3 = MODIFIED MODE : UNFOLLOW USERS WHO DON'T FOLLOW YOU BASED ON RECENT FEED")
